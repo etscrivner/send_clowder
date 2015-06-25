@@ -21,7 +21,7 @@ def send_clowder(api_key, status, service_name, value):
         clowder.fail(data)
 
 
-if __name__ == '__main__':
+def send_clowder_main():
     parser = argparse.ArgumentParser(
         description='Send status checks to clowder.io'
     )
@@ -39,3 +39,7 @@ if __name__ == '__main__':
     )
     args = parser.parse_args()
     send_clowder(args.api_key, args.status, args.service_name, args.value)
+
+
+if __name__ == '__main__':
+    send_clowder_main()
