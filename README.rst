@@ -1,5 +1,5 @@
 ===============================
-Simple command-line tool for sending messages to clowder.io.
+send_clower
 ===============================
 
 .. image:: https://img.shields.io/travis/etscrivner/send_clowder.svg
@@ -8,8 +8,7 @@ Simple command-line tool for sending messages to clowder.io.
 .. image:: https://img.shields.io/pypi/v/send_clowder.svg
         :target: https://pypi.python.org/pypi/send_clowder
 
-
-Python Boilerplate contains all the boilerplate you need to create a Python package.
+Simple command-line tool for sending messages to clowder.io.
 
 * Free software: BSD license
 * Documentation: https://send_clowder.readthedocs.org.
