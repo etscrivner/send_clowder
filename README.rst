@@ -13,7 +13,28 @@ Simple command-line tool for sending messages to clowder.io.
 * Free software: BSD license
 * Documentation: https://send_clowder.readthedocs.org.
 
-Features
---------
+Installation
+------------
+
+Simply install the application from PyPI.
+
+.. shell::
+
+   pip install send_clowder
+
+Usage
+-----
+
+To send an ok status update simply pipe your values as follows:
+
+.. shell::
+
+   echo -e "25" | xargs send_clowder APIKEY ok my_service -v
+
+To send a failure status simply change ok to fail:
+
+.. shell::
+
+   echo -e "25" | xargs send_clowder APIKEY fail my_service -v
 
 * TODO

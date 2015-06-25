@@ -13,6 +13,8 @@ def send_clowder(api_key, status, service_name, value):
     if value:
         data['value'] = value
 
+    print('Sending {} - {} - {}'.format(service_name, status, value))
+
     if status.lower() in ['ok']:
         clowder.ok(data)
     else:
@@ -36,8 +38,4 @@ if __name__ == '__main__':
         '-v', '--value', help='The value to be sent along'
     )
     args = parser.parse_args()
-    print args.api_key
-    print args.status
-    print args.service_name
-    print args.value
     send_clowder(args.api_key, args.status, args.service_name, args.value)
