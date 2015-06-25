@@ -15,7 +15,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    'https://github.com/keithhackbarth/clowder_client/zipball/master'
+    'clowder'
 ]
 
 test_requirements = [
@@ -26,7 +26,7 @@ test_requirements = [
 setup(
     name='send_clowder',
     version='0.1.0',
-    description="Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    description="Simple command-line tool for sending messages to clowder",
     long_description=readme + '\n\n' + history,
     author="Eric Scrivner",
     author_email='eric.t.scrivner@gmail.com',
