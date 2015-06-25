@@ -15,11 +15,12 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    # TODO: put package requirements here
+    'https://github.com/keithhackbarth/clowder_client/zipball/master'
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'nose',
+    'mock'
 ]
 
 setup(
