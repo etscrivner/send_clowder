@@ -36,3 +36,12 @@ To send a failure status simply change ok to fail:
 .. code-block:: shell
 
    echo -e "25" | xargs send_clowder APIKEY fail my_service -v
+
+You can also send along frequencies as ISO8601 durations, for example:
+
+.. code-block:: shell
+
+   send_clowder APIKEY ok my_server -f P1D
+
+This would cause Clowder to send an error email if the gap between service
+results was more than 1 day.
