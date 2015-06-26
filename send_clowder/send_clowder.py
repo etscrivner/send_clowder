@@ -2,9 +2,10 @@
 import argparse
 
 import clowder
+import isodate
 
 
-def send_clowder(api_key, status, service_name, value):
+def send_clowder(api_key, status, service_name, value, frequency):
     """Execute the send clowder command."""
     clowder.api_key = api_key
 
@@ -12,6 +13,9 @@ def send_clowder(api_key, status, service_name, value):
 
     if value:
         data['value'] = value
+
+    if frequency:
+        data['frequency'] = isodate.parse_duration(frequency)
 
     print('Sending {} - {} - {}'.format(service_name, status, value))
 
@@ -37,8 +41,14 @@ def send_clowder_main():
     parser.add_argument(
         '-v', '--value', help='The value to be sent along'
     )
+    parser.add_argument(
+        '-f', '--frequency', help='The frequency of checks as ISO8601 duration'
+    )
     args = parser.parse_args()
-    send_clowder(args.api_key, args.status, args.service_name, args.value)
+    send_clowder(
+        args.api_key, args.status, args.service_name,
+        args.value, args.frequency
+    )
 
 
 if __name__ == '__main__':

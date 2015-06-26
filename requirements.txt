@@ -1,2 +1,3 @@
 wheel==0.23.0
-https://github.com/keithhackbarth/clowder_client/zipball/master
+clowder==0.1.2
+isodate==0.5.1
