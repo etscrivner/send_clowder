@@ -25,7 +25,7 @@ test_requirements = [
 
 setup(
     name='send_clowder',
-    version='0.1.1',
+    version='0.1.2',
     description="Simple command-line tool for sending messages to clowder",
     long_description=readme + '\n\n' + history,
     author="Eric Scrivner",
